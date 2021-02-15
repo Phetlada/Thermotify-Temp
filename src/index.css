@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;400&display=swap');
+@layer components {
+    .font-style-base{
+        @apply font-medium font-Prompt;
+    }
+    .style-icon{
+        @apply fill-current w-5 text-white inline-block;
+    }
+    .text-gradient {
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text_logo{
+        @apply  font-bold text-gradient bg-gradient-to-r from-Logo-l  to-Logo-r max-w-max w-auto 
+    }
+    .home-dashboard{
+        @apply px-3 py-2 justify-evenly  rounded-lg mb-4 flex flex-col space-y-2 h-20;
+    }
+    
+    /* Make from */
+    .TitleFrom{
+        @apply text-white text-2xl sm:text-3xl font-style-base text-center;
+    }
+    .TitleBig{
+        @apply text-white text-2xl sm:text-8xl font-style-base text-center;
+    }
+    .TitleTemp{
+        @apply text-white text-2xl sm:text-3xl font-style-base text-center ;
+    }
+    .head-input{
+        @apply text-white text-base sm:text-lg font-medium font-style-base;
+    }
+    .head-temp{
+        @apply text-white text-xl sm:text-3xl font-style-base text-center;
+    }
+    .field-normal-input{
+        @apply  p-2 bg-gray-400 rounded-lg w-64 sm:w-80  text-white;
+    }
+    .field-mindle-input{
+        @apply  p-2 bg-gray-400 rounded-l-lg w-44 sm:w-52  text-white;
+    }
+    .field-mini-input{
+        @apply  p-2 bg-gray-400 rounded-lg w-28 sm:w-36  text-white;
+    }
+    .submit-input{
+        @apply text-white text-lg  font-style-base text-center p-2 bg-theamButton rounded-lg w-64  hover:bg-theamButton-hover sm:w-80 md:relative  md:mt-14 absolute bottom-10 ;
+    }
+    .box-temp{
+        @apply text-white bg-bgGroupDevice box-content rounded-lg h-24 w-24 p-5  ;
+    }
+    .box-l-temp{
+        @apply text-white bg-bgGroupDevice box-content rounded-lg h-20  p-6  w-60 ;
+    }
+
+
+
+    /* Make toggle */
+    .switch {
+        @apply relative inline-block w-12 h-6;
+    }
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        @apply w-5 h-5;
+        position: absolute;
+        content: "";
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    input:checked + .slider {
+        @apply bg-blue-700;
+    }
+    
+    /* input:focus + .slider { 
+        box-shadow: 0 0 1px ;
+    } */
+    
+    input:checked + .slider:before {
+        -webkit-transform: translateX(24px);
+        -ms-transform: translateX(24px);
+        transform: translateX(24px);
+    }
+    
+        /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+}
